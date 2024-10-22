@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="food-delivery.css">
+    <title>Food Delivery</title>
+</head>
+<body>
+    <header>
+        <h1> Swiggy Food Delivery</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart (<span id="cartCount">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="menu-item" data-name="Pizza" data-price="10">
+                <h3>Pizza</h3>
+                <p class="cost"><b>Cost:$5.25</b></p>
+                <p>Delicious cheese and tomato pizza.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-name="Burger" data-price="8">
+                <h3>Burger</h3>
+                <p class="cost"><b>Cost:$7.20</b></p>
+                <p>Juicy beef burger with lettuce and tomato.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-name="Sushi" data-price="15">
+                <h3>Sushi</h3>
+                <p>Fresh sushi rolls with wasabi.</p>
+                <p class="cost"><b>Cost:$8.15</b></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cartItems">
+                <!-- Cart items will be added here -->
+            </ul>
+            <p id="totalPrice">Total: $0</p>
+            <button id="checkoutButton">Checkout</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

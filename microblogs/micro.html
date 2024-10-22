@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Microblog</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 10px;
+    
+}
+
+button {
+    padding: 10px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+.post {
+    padding: 10px;
+    margin: 10px 0;
+    background: #e9ecef;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Microblog</h1>
+        <textarea id="postInput" placeholder="Create Your Post!!"></textarea>
+        <button id="postButton">Post</button>
+        <div id="feed">
+            <!-- Posts will appear here -->
+        </div>
+    </div>
+    <script>
+        document.getElementById('postButton').addEventListener('click', function() {
+    const postInput = document.getElementById('postInput');
+    const postText = postInput.value.trim();
+
+    if (postText !== '') {
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+        postDiv.textContent = postText;
+        document.getElementById('feed').appendChild(postDiv);
+        postInput.value = '';
+    }
+});
+
+    </script>
+</body>
+</html>
